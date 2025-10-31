@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<data>
+    <record id="view_mrp_workorder_tree_inherit" model="ir.ui.view">
+        <field name="name">mrp.production.work.order.tree.inherit.qty</field>
+        <field name="model">mrp.workorder</field>
+        <field name="inherit_id" ref="mrp.mrp_production_workorder_tree_view" />
+        <field name="arch" type="xml">
+            <tree position="attributes">
+                <attribute name="default_order">id desc</attribute>
+            </tree>
+            <field name="qty_producing" position="after">
+                <field name="qty_produced" optional="hide"/>
+            </field>
+            <field name="qty_producing" position="attributes">
+                <attribute name="invisible">0</attribute>
+                <attribute name="optional">hide</attribute>
+            </field>
+            <field name="production_id" position="after">
+                <field name="source" optional="hide"/>
+                <field name="priority" widget="priority" optional="show"/>
+            </field>
+        </field>
+    </record>
+
+    <record id="mrp_workorder_pivot_view_inherit" model="ir.ui.view">
+        <field name="name">mrp.production.work.order.pivot.inherit.qty</field>
+        <field name="model">mrp.workorder</field>
+        <field name="inherit_id" ref="mrp.workcenter_line_pivot" />
+        <field name="arch" type="xml">
+            <xpath expr="//pivot" position="inside">
+                <field name="qty_producing" type="measure"/>
+                <field name="qty_produced" type="measure"/>
+                <field name="priority"/>
+            </xpath>
+        </field>
+    </record>
+</data>
