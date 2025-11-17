@@ -16,6 +16,7 @@
                 <attribute name="optional">hide</attribute>
             </field>
             <field name="production_id" position="after">
+                <field name="product_id" optional="hide"/>
                 <field name="source" optional="hide"/>
                 <field name="priority" widget="priority" optional="show"/>
             </field>
@@ -28,7 +29,7 @@
         <field name="inherit_id" ref="mrp.workcenter_line_pivot" />
         <field name="arch" type="xml">
             <xpath expr="//pivot" position="inside">
-                <field name="qty_producing" type="measure"/>
+                <!-- <field name="qty_producing" type="measure"/> -->
                 <field name="qty_produced" type="measure"/>
                 <field name="priority"/>
             </xpath>
