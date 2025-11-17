@@ -11,6 +11,9 @@
             <field name="qty_producing" position="after">
                 <field name="qty_produced" optional="hide"/>
             </field>
+            <field name="workcenter_id" position="attributes">
+                <attribute name="optional">hide</attribute>
+            </field>
             <field name="qty_producing" position="attributes">
                 <attribute name="invisible">0</attribute>
                 <attribute name="optional">hide</attribute>
