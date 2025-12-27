@@ -14,10 +14,6 @@
             <field name="workcenter_id" position="attributes">
                 <attribute name="optional">hide</attribute>
             </field>
-            <field name="workcenter_id" position="after">
-                <field name="worker" groups="mrp.group_mrp_user" readonly="1" optional="hide"/>
-                <field name="worker" groups="mrp.group_mrp_manager"/>
-            </field>
             <field name="qty_producing" position="attributes">
                 <attribute name="invisible">0</attribute>
                 <attribute name="optional">hide</attribute>

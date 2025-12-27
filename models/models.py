@@ -27,8 +27,3 @@ class MrpWorkorder(models.Model):
         store=True,
         readonly=True,
     )
-
-    worker = fields.Many2one(
-        "res.users",
-        "Worker", 
-    )
