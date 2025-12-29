@@ -35,7 +35,6 @@
                 <!-- <field name="qty_producing" type="measure"/> -->
                 <field name="qty_produced" type="measure"/>
                 <field name="priority"/>
-                <field name="worker"/>
             </xpath>
         </field>
     </record>
