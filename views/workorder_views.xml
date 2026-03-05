@@ -23,6 +23,9 @@
                 <field name="source" optional="hide"/>
                 <field name="priority" widget="priority" optional="show"/>
             </field>
+            <field name="state" position="attributes">
+                <attribute name="attrs">{'invisible': [('production_state', '=', 'draft')]}</attribute>
+            </field>
         </field>
     </record>
 
