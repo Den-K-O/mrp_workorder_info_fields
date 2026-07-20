@@ -9,9 +9,10 @@
     'description': """
 Show additional info fields in mrp workorder views.
     """,
-    'depends': ['mrp'],
+    'depends': ['mrp', 'stock'],
     'data': [
         'views/workorder_views.xml',
+        'views/additional_views.xml',
     ],
     'installable': True,
     'auto_install': False
