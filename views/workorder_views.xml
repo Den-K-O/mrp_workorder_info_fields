@@ -9,22 +9,52 @@
                 <attribute name="default_order">id desc</attribute>
             </tree>
             <field name="qty_producing" position="after">
-                <field name="qty_produced" optional="hide"/>
+                <field name="qty_produced" optional="hide" width="80px"/>
+            </field>
+            <field name="date_planned_finished" position="after">
+                <field name="parent_mo_deadline" optional="show" width="95px"/>
             </field>
             <field name="workcenter_id" position="attributes">
                 <attribute name="optional">hide</attribute>
+                <attribute name="width">70px</attribute>
             </field>
             <field name="qty_producing" position="attributes">
                 <attribute name="invisible">0</attribute>
                 <attribute name="optional">hide</attribute>
+                <attribute name="width">80px</attribute>
             </field>
             <field name="production_id" position="after">
-                <field name="product_id" optional="hide"/>
-                <field name="source" optional="hide"/>
-                <field name="priority" widget="priority" optional="show"/>
+                <field name="product_id" optional="hide" width="260px"/>
+                <field name="source" optional="hide" width="100px"/>
+                <field name="priority" widget="priority" optional="show" width="55px"/>
+            </field>
+            <field name="name" position="attributes">
+                <attribute name="width">120px</attribute>
+            </field>
+            <field name="production_id" position="attributes">
+                <attribute name="width">120px</attribute>
+            </field>
+            <field name="date_planned_start" position="attributes">
+                <attribute name="width">130px</attribute>
+            </field>
+            <field name="date_planned_finished" position="attributes">
+                <attribute name="width">60px</attribute>
+            </field>
+            <field name="date_start" position="attributes">
+                <attribute name="width">60px</attribute>
+            </field>
+            <field name="date_finished" position="attributes">
+                <attribute name="width">60px</attribute>
+            </field>
+            <field name="duration_expected" position="attributes">
+                <attribute name="width">75px</attribute>
+            </field>
+            <field name="duration" position="attributes">
+                <attribute name="width">80px</attribute>
             </field>
             <field name="state" position="attributes">
                 <attribute name="attrs">{'invisible': [('production_state', '=', 'draft')]}</attribute>
+                <attribute name="width">90px</attribute>
             </field>
         </field>
     </record>

@@ -27,3 +27,10 @@ class MrpWorkorder(models.Model):
         store=True,
         readonly=True,
     )
+
+    parent_mo_deadline = fields.Datetime(
+        string="Parent MO Deadline",
+        related='production_id.date_deadline',
+        store=True,
+        readonly=True,
+    )
