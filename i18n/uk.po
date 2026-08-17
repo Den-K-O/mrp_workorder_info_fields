@@ -16,6 +16,23 @@ msgstr ""
 "Plural-Forms: \n"
 
 #. module: mrp_workorder_info_fields
+#: model:ir.module.module,description:mrp_workorder_info_fields.module_meta_information
+#: model:ir.module.module,summary:mrp_workorder_info_fields.module_meta_information
+msgid "Workorder info fields"
+msgstr "Інформаційні поля виробничих операцій"
+
+#. module: mrp_workorder_info_fields
+#: model:ir.module.module,description:mrp_workorder_info_fields.module_meta_information
+#: model:ir.module.module,summary:mrp_workorder_info_fields.module_meta_information
+msgid "Show additional info fields in mrp workorder views"
+msgstr "Показати додаткові інформаційні поля у переглядах виробничих операцій"
+
+#. module: mrp_workorder_info_fields
+#: model:ir.module.module,description:mrp_workorder_info_fields.module_meta_information
+msgid "Show additional info fields in mrp workorder views.\n    "
+msgstr "Показати додаткові інформаційні поля у переглядах виробничих операцій.\n    "
+
+#. module: mrp_workorder_info_fields
 #: model:ir.model.fields,field_description:mrp_workorder_info_fields.field_mrp_workorder__parent_mo_deadline
 msgid "Parent MO Deadline"
 msgstr "Дедлайн батьківського виробничого замовлення"
@@ -29,3 +46,8 @@ msgstr "Пріоритет"
 #: model:ir.model.fields,field_description:mrp_workorder_info_fields.field_mrp_workorder__source
 msgid "Source"
 msgstr "Джерело"
+
+#. module: mrp_workorder_info_fields
+#: model:ir.model.fields,field_description:mrp_workorder_info_fields.field_mrp_workorder__next_workcenter
+msgid "Next Workcenter"
+msgstr "Наступний робочий центр"

@@ -2,7 +2,7 @@
 #   (http://www.forgeflow.com)
 # License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl.html).
 
-from odoo import fields, models
+from odoo import api, fields, models
 from odoo.addons.stock.models.stock_move import PROCUREMENT_PRIORITIES
 
 
@@ -34,3 +34,14 @@ class MrpWorkorder(models.Model):
         store=True,
         readonly=True,
     )
+
+    next_workcenter = fields.Many2one(
+        string="Next Workcenter",
+        comodel_name='mrp.workcenter',
+        compute='_compute_next_workcenter',
+    )
+
+    @api.depends('next_work_order_id.workcenter_id')
+    def _compute_next_workcenter(self):
+        for wo in self:
+            wo.next_workcenter = wo.next_work_order_id.workcenter_id
